@@ -6,45 +6,47 @@ import {
   Text,
   ImageBackground,
 } from 'react-native';
-import {icons, images, SIZES, COLORS, FONTS} from '../helpers';
+import {icons, images, SIZES, COLORS, FONTS} from '../../helpers';
 import LinearGradient from 'react-native-linear-gradient';
 export default function OnBoard({navigation, route}) {
-  const result = [
-    {name: 'xyv', location: 'Kandy'},
-    {name: 'dev pharmacy', location: 'Colombo'},
-    {name: 'new pharmacy', location: 'Malabe'},
-    {name: 'kaduwela pharmacy', location: 'Kaduwela'},
-    {name: 'test pharmacy', location: 'Kotte'},
-  ];
-
+  const {resData} = route.params;
+  const result = resData.name;
+  console.log('hello from res', resData);
   console.log(result);
   const api = {foo: 'bar', foz: 'baz'};
   return (
     <ImageBackground
       style={styles.container}
-      source={require('../assets/images/med.jpg')}>
+      source={require('../../assets/images/med.jpg')}>
       <LinearGradient
         colors={['transparent', COLORS.primary, COLORS.primary]}
         style={styles.overlay}>
         <Text style={styles.title2}>{result.name}</Text>
         <View
           style={{marginTop: 20, alignItems: 'center', paddingHorizontal: 20}}>
-          <Text style={styles.title}>Nearby Pharmacies</Text>
+          <Text style={styles.title}>Medicines</Text>
           {result &&
             result.map(list => (
               <Text style={styles.des} key={list.index}>
-                ⦿ Name : {list.name}
-                {'\n'}⦿ Location : {list.location}
+                ⦿{list}
               </Text>
             ))}
+          {/* <Text style={styles.title}>Solutions</Text>
+
+          {result.solutions &&
+            result.solutions.map(list => (
+              <Text style={styles.des} key={list.index}>
+                ⦿{list.solution}
+              </Text>
+            ))} */}
         </View>
 
         <TouchableOpacity
           onPress={() => {
-            navigation.navigate('home');
+            navigation.navigate('pharmacy');
           }}
           style={styles.btn}>
-          <Text style={styles.btnText}>home</Text>
+          <Text style={styles.btnText}>Pharmacies</Text>
         </TouchableOpacity>
       </LinearGradient>
     </ImageBackground>
@@ -92,7 +94,7 @@ const styles = StyleSheet.create({
     color: COLORS.third,
     fontSize: 15,
     textAlign: 'center',
-    // paddingHorizontal: 20,
+    paddingHorizontal: 20,
     fontWeight: 'bold',
     marginTop: 10,
   },

@@ -7,9 +7,9 @@ import {RNCamera} from 'react-native-camera';
 // import AsyncStorage from '@react-native-community/async-storage';
 import Spinner from 'react-native-loading-spinner-overlay';
 import * as ImagePicker from 'react-native-image-picker';
-import {icons, images, SIZES, COLORS, FONTS} from '../helpers';
+import {icons, images, SIZES, COLORS, FONTS} from '../../helpers';
 import LinearGradient from 'react-native-linear-gradient';
-import Loader from '../components/Loader';
+import Loader from '../../components/Loader';
 
 const MainScreen = ({routes, navigation}) => {
   let camera;

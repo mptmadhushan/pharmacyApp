@@ -31,15 +31,43 @@ export default function Home({navigation}) {
       <LinearGradient
         colors={['transparent', COLORS.black, COLORS.black]}
         style={styles.overlay}>
-        <View style={styles.rowNorm}>
-          <TouchableOpacity
-            onPress={() => navigation.navigate('PlantUpload')}
-            style={styles.slide1}>
-            <View style={styles.centerFlex}>
-              <Icon name="notes-medical" size={30} color={COLORS.white} />
-              <Text style={styles.text001}>Take Action</Text>
-            </View>
-          </TouchableOpacity>
+        <View style={styles.rowN}>
+          <View style={styles.rowNorm}>
+            <TouchableOpacity
+              onPress={() => navigation.navigate('PlantUpload')}
+              style={styles.slide1}>
+              <View style={styles.centerFlex}>
+                <Icon name="notes-medical" size={30} color={COLORS.white} />
+                <Text style={styles.text001}>Take Action</Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => navigation.navigate('BodyTemperature')}
+              style={styles.slide1}>
+              <View style={styles.centerFlex}>
+                <Icon name="notes-medical" size={30} color={COLORS.white} />
+                <Text style={styles.text001}>Device</Text>
+              </View>
+            </TouchableOpacity>
+          </View>
+          <View style={styles.rowNorm}>
+            <TouchableOpacity
+              onPress={() => navigation.navigate('PlantUpload')}
+              style={styles.slide1}>
+              <View style={styles.centerFlex}>
+                <Icon name="notes-medical" size={30} color={COLORS.white} />
+                <Text style={styles.text001}>Take Action</Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => navigation.navigate('BodyTemperature')}
+              style={styles.slide1}>
+              <View style={styles.centerFlex}>
+                <Icon name="notes-medical" size={30} color={COLORS.white} />
+                <Text style={styles.text001}>Chat</Text>
+              </View>
+            </TouchableOpacity>
+          </View>
         </View>
       </LinearGradient>
     </ImageBackground>
@@ -55,8 +83,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     padding: 5,
     flex: 1,
-    maxWidth: SIZES.width * 0.5,
-    height: SIZES.width * 0.2,
+    minWidth: SIZES.width * 0.3,
+    minHeight: SIZES.width * 0.2,
   },
   centerFlex: {
     justifyContent: 'center',
@@ -74,8 +102,8 @@ const styles = StyleSheet.create({
     fontSize: 15,
   },
   overlay: {
-    marginTop: SIZES.height * 0.6,
-    height: SIZES.height * 0.3,
+    marginTop: SIZES.height * 0.4,
+    height: SIZES.height * 0.6,
     // alignItems: 'center',
   },
   title1: {
@@ -84,13 +112,16 @@ const styles = StyleSheet.create({
     fontSize: 40,
   },
   rowNorm: {
-    flexDirection: 'row',
+    flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'center',
-    flex: 1,
-    flexWrap: 'wrap',
     maxWidth: SIZES.width,
     marginLeft: SIZES.width * 0.06,
     marginRight: SIZES.width * 0.06,
+  },
+  rowN: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    alignContent: 'center',
   },
 });
