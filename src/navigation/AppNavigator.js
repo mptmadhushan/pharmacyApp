@@ -11,6 +11,12 @@ import BodyTemperature from '../screens/Iot/BodyTemperature';
 import BloodOxygen from '../screens/Iot/BloodOxygen';
 import HeartRate from '../screens/Iot/HeartRate';
 import BloodPressure from '../screens/Iot/BloodPressure';
+import IotHome from '../screens/Iot/IotHome';
+import Chat from '../screens/Chat/Chat';
+
+import Details from '../screens/HealthTips/Details';
+import Meal from '../screens/HealthTips/Meal';
+import Ex from '../screens/HealthTips/Ex';
 
 import {TapGestureHandler} from 'react-native-gesture-handler';
 
@@ -52,7 +58,7 @@ function MainStackNavigator() {
         <Stack.Screen
           name="HeartRate"
           options={{headerShown: false}}
-          component={Pharmacy}
+          component={HeartRate}
         />
         <Stack.Screen
           name="BodyTemperature"
@@ -60,25 +66,36 @@ function MainStackNavigator() {
           component={BodyTemperature}
         />
         <Stack.Screen
-          name="BodyOxygen"
-          options={{headerShown: false}}
-          component={BodyTemperature}
-        />{' '}
-        <Stack.Screen
           name="BloodPressure"
           options={{headerShown: false}}
           component={BloodPressure}
-        />{' '}
+        />
         <Stack.Screen
           name="BloodOxygen"
           options={{headerShown: false}}
           component={BloodOxygen}
-        />{' '}
-        <Stack.Screen
-          name="HeartRate"
-          options={{headerShown: false}}
-          component={BloodOxygen}
         />
+        <Stack.Screen
+          name="Chat"
+          options={{headerShown: false}}
+          component={Chat}
+        />
+        <Stack.Screen
+          name="IotHome"
+          options={{headerShown: false}}
+          component={IotHome}
+        />
+        <Stack.Screen
+          name="Details"
+          options={{headerShown: false}}
+          component={Details}
+        />
+        <Stack.Screen
+          name="Meal"
+          options={{headerShown: false}}
+          component={Meal}
+        />
+        <Stack.Screen name="Ex" options={{headerShown: false}} component={Ex} />
       </Stack.Navigator>
     </NavigationContainer>
   );

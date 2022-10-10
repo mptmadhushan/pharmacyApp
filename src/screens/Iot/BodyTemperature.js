@@ -11,16 +11,16 @@ export default function Humidity({navigation}) {
   const [spo2, setSpo2] = useState();
   const [resp, setResp] = useState([
     {date: '2017-01-02', count: 1},
-    {date: '2017-01-03', count: 2},
+    {date: '2017-01-03', count: 4},
     {date: '2017-01-04', count: 3},
-    {date: '2017-01-05', count: 4},
+    {date: '2017-01-05', count: 3},
     {date: '2017-01-06', count: 5},
     {date: '2017-01-30', count: 2},
     {date: '2017-01-31', count: 3},
-    {date: '2017-03-01', count: 2},
+    {date: '2017-03-01', count: 1},
     {date: '2017-04-02', count: 4},
-    {date: '2017-03-05', count: 2},
-    {date: '2017-02-30', count: 4},
+    {date: '2017-03-05', count: 5},
+    {date: '2017-02-30', count: 2},
   ]);
   const [spo2d, setSpod2d] = useState();
   const [blood, setBlood] = useState([
@@ -32,7 +32,7 @@ export default function Humidity({navigation}) {
     'Sat',
     'Sun',
   ]);
-  const [blood2, setBlood2] = useState([20, 45, 28, 80, 99, 43]);
+  const [blood2, setBlood2] = useState([31, 35, 38, 30, 33, 34]);
   const [spoAvg, setSpoAvg] = useState();
 
   useEffect(() => {

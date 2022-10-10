@@ -32,7 +32,7 @@ export default function Humidity({navigation}) {
     'Sat',
     'Sun',
   ]);
-  const [blood2, setBlood2] = useState([20, 45, 28, 80, 99, 43]);
+  const [blood2, setBlood2] = useState([60, 75, 68, 80, 99, 73]);
   const [spoAvg, setSpoAvg] = useState();
 
   useEffect(() => {
@@ -169,7 +169,7 @@ export default function Humidity({navigation}) {
           {/* {spoAvg ? ( */}
           <Text style={styles.title2}>
             {/* {spoAvg.reduce((a, b) => a + b, 0).toFixed(2)} */}
-            30
+            70
           </Text>
           {/* ) : null} */}
         </View>

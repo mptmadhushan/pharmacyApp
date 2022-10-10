@@ -8,7 +8,7 @@ import {
   Text,
   StyleSheet,
 } from 'react-native';
-import {images, SIZES, COLORS, FONTS} from '../helpers';
+import {images, SIZES, COLORS, FONTS} from '../../helpers';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import LinearGradient from 'react-native-linear-gradient';
 
@@ -18,7 +18,7 @@ export default function Home({navigation}) {
   return (
     <ImageBackground
       style={styles.container}
-      source={require('../assets/images/home.jpg')}>
+      source={require('../../assets/images/iot.jpg')}>
       <View
         style={{
           alignItems: 'center',
@@ -34,37 +34,37 @@ export default function Home({navigation}) {
         <View style={styles.rowN}>
           <View style={styles.rowNorm}>
             <TouchableOpacity
-              onPress={() => navigation.navigate('PlantUpload')}
+              onPress={() => navigation.navigate('HeartRate')}
               style={styles.slide1}>
               <View style={styles.centerFlex}>
                 <Icon name="notes-medical" size={30} color={COLORS.white} />
-                <Text style={styles.text001}>Take Action</Text>
+                <Text style={styles.text001}>Heart Rate</Text>
               </View>
             </TouchableOpacity>
             <TouchableOpacity
-              onPress={() => navigation.navigate('IotHome')}
+              onPress={() => navigation.navigate('BodyTemperature')}
               style={styles.slide1}>
               <View style={styles.centerFlex}>
                 <Icon name="notes-medical" size={30} color={COLORS.white} />
-                <Text style={styles.text001}>Device</Text>
+                <Text style={styles.text001}>Body Temperature</Text>
               </View>
             </TouchableOpacity>
           </View>
           <View style={styles.rowNorm}>
             <TouchableOpacity
-              onPress={() => navigation.navigate('Details')}
+              onPress={() => navigation.navigate('BloodOxygen')}
               style={styles.slide1}>
               <View style={styles.centerFlex}>
                 <Icon name="notes-medical" size={30} color={COLORS.white} />
-                <Text style={styles.text001}>Health Tips</Text>
+                <Text style={styles.text001}>Blood Oxygen</Text>
               </View>
             </TouchableOpacity>
             <TouchableOpacity
-              onPress={() => navigation.navigate('Chat')}
+              onPress={() => navigation.navigate('BloodPressure')}
               style={styles.slide1}>
               <View style={styles.centerFlex}>
                 <Icon name="notes-medical" size={30} color={COLORS.white} />
-                <Text style={styles.text001}>Chat</Text>
+                <Text style={styles.text001}>Blood Pressure</Text>
               </View>
             </TouchableOpacity>
           </View>
